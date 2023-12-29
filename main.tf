@@ -29,6 +29,7 @@ resource "spacelift_stack" "portal_codespaces_secrets" {
   description = "Secrets for ${var.user_name}'s portal codespaces"
   repository = "pepperdash-infrastructure/portal-codespaces" 
   branch = "main"
+  space_id = var.space_id
 }
 
 resource "spacelift_aws_integration" "aws_integration" {
